@@ -1,2 +1,2 @@
-# CODSOFT
-A repo for the AI tasks
+# AI projects
+A repository consisting of 3 AI projects!
