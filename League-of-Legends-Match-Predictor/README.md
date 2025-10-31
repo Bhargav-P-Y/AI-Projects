@@ -2,7 +2,7 @@
 
 ## This project aims to figure out if a player will either win or lose in the game, League of Legends<br>
 
-## This project implements the following steps<br> 
+## The following steps are implemented<br> 
 - Data loading & preprocessing
 - Defining the logistic regression model
 - Model Training
@@ -11,4 +11,5 @@
 - Model saving & loading
 - Hyperparameter tuning
 - Ranking feature importances 
+
 
