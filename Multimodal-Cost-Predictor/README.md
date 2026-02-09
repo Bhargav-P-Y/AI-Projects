@@ -7,19 +7,19 @@
 
 **Score:** 52.44% SMAPE (Symmetric Mean Absolute Percentage Error)
 
-## 📖 Executive Summary
+##  Executive Summary
 This project is an end-to-end Machine Learning pipeline designed to predict the price of retail items based on a multimodal dataset (Images + Text + Tabular Metadata). By leveraging a fusion of **Computer Vision (ResNet50)**, **NLP (Sentence Transformers)**, and **Gradient Boosting (LightGBM)**, the solution effectively handles high-dimensional, noisy e-commerce data.
 
 The model ranked in the **Top 12% nationwide**, demonstrating robust handling of missing data and advanced feature engineering techniques.
 
-## 🛠️ Tech Stack & Tools
+##  Tech Stack & Tools
 * **Core:** Python, Pandas, NumPy, Scikit-Learn
 * **Natural Language Processing:** `sentence-transformers` (HuggingFace)
 * **Computer Vision:** `torchvision` (ResNet50), `Pillow`
 * **Modeling:** LightGBM, XGBoost
 * **Data Engineering:** Regex (Regular Expressions), TQDM, Requests
 
-## 🧠 Methodological Approach
+##  Methodological Approach
 
 ### 1. Advanced Feature Engineering
 We transformed raw, unstructured data into high-signal numerical features:
@@ -43,3 +43,4 @@ To capture semantic nuance, I engineered a dual-stream embedding architecture:
 ### 4. Post-Processing & Inference
 * **Inverse Transformation:** Predictions were transformed back to the original scale using `np.expm1` to reverse the log-normalization.
 * **Constraint Enforcement:** Applied a non-negative constraint (`pred[pred < 0] = 0`) to ensure logical pricing outputs.
+
