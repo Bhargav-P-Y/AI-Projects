@@ -1,0 +1,13 @@
+# Core OpenEnv Framework
+openenv-core>=0.2.2
+
+# API Server
+fastapi
+uvicorn
+
+# LLM Baseline Inference
+openai
+
+# Spec Compliance & Data Validation
+pydantic
+safetensors

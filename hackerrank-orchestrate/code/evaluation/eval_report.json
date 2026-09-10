@@ -1,0 +1,314 @@
+{
+  "benchmark_file": "sample_messages.csv",
+  "sample_count": 30,
+  "action_accuracy_pct": 86.67,
+  "message_type_accuracy_pct": 80.0,
+  "evidence_retrieval_recall_pct": 63.33,
+  "confidence_statistics": {
+    "mean": 0.88,
+    "min": 0.78,
+    "max": 0.95
+  },
+  "details": [
+    {
+      "message_id": "sample_msg_001",
+      "gt_action": "notify",
+      "pred_action": "notify",
+      "action_match": true,
+      "gt_type": "urgent",
+      "pred_type": "urgent",
+      "type_match": true,
+      "confidence": 0.89
+    },
+    {
+      "message_id": "sample_msg_002",
+      "gt_action": "notify",
+      "pred_action": "notify",
+      "action_match": true,
+      "gt_type": "event",
+      "pred_type": "urgent",
+      "type_match": false,
+      "confidence": 0.9
+    },
+    {
+      "message_id": "sample_msg_003",
+      "gt_action": "notify",
+      "pred_action": "notify",
+      "action_match": true,
+      "gt_type": "urgent",
+      "pred_type": "urgent",
+      "type_match": true,
+      "confidence": 0.88
+    },
+    {
+      "message_id": "sample_msg_004",
+      "gt_action": "notify",
+      "pred_action": "notify",
+      "action_match": true,
+      "gt_type": "business_update",
+      "pred_type": "business_update",
+      "type_match": true,
+      "confidence": 0.92
+    },
+    {
+      "message_id": "sample_msg_005",
+      "gt_action": "notify",
+      "pred_action": "notify",
+      "action_match": true,
+      "gt_type": "event",
+      "pred_type": "business_update",
+      "type_match": false,
+      "confidence": 0.91
+    },
+    {
+      "message_id": "sample_msg_006",
+      "gt_action": "notify",
+      "pred_action": "notify",
+      "action_match": true,
+      "gt_type": "personal",
+      "pred_type": "personal",
+      "type_match": true,
+      "confidence": 0.89
+    },
+    {
+      "message_id": "sample_msg_007",
+      "gt_action": "digest",
+      "pred_action": "digest",
+      "action_match": true,
+      "gt_type": "promotion",
+      "pred_type": "promotion",
+      "type_match": true,
+      "confidence": 0.82
+    },
+    {
+      "message_id": "sample_msg_008",
+      "gt_action": "digest",
+      "pred_action": "digest",
+      "action_match": true,
+      "gt_type": "event",
+      "pred_type": "event",
+      "type_match": true,
+      "confidence": 0.83
+    },
+    {
+      "message_id": "sample_msg_009",
+      "gt_action": "digest",
+      "pred_action": "digest",
+      "action_match": true,
+      "gt_type": "greeting",
+      "pred_type": "greeting",
+      "type_match": true,
+      "confidence": 0.85
+    },
+    {
+      "message_id": "sample_msg_010",
+      "gt_action": "digest",
+      "pred_action": "digest",
+      "action_match": true,
+      "gt_type": "personal",
+      "pred_type": "personal",
+      "type_match": true,
+      "confidence": 0.82
+    },
+    {
+      "message_id": "sample_msg_011",
+      "gt_action": "digest",
+      "pred_action": "digest",
+      "action_match": true,
+      "gt_type": "business_update",
+      "pred_type": "business_update",
+      "type_match": true,
+      "confidence": 0.84
+    },
+    {
+      "message_id": "sample_msg_012",
+      "gt_action": "digest",
+      "pred_action": "digest",
+      "action_match": true,
+      "gt_type": "promotion",
+      "pred_type": "personal",
+      "type_match": false,
+      "confidence": 0.81
+    },
+    {
+      "message_id": "sample_msg_013",
+      "gt_action": "mute",
+      "pred_action": "mute",
+      "action_match": true,
+      "gt_type": "greeting",
+      "pred_type": "greeting",
+      "type_match": true,
+      "confidence": 0.88
+    },
+    {
+      "message_id": "sample_msg_014",
+      "gt_action": "mute",
+      "pred_action": "mute",
+      "action_match": true,
+      "gt_type": "forward",
+      "pred_type": "forward",
+      "type_match": true,
+      "confidence": 0.89
+    },
+    {
+      "message_id": "sample_msg_015",
+      "gt_action": "mute",
+      "pred_action": "mute",
+      "action_match": true,
+      "gt_type": "promotion",
+      "pred_type": "promotion",
+      "type_match": true,
+      "confidence": 0.93
+    },
+    {
+      "message_id": "sample_msg_019",
+      "gt_action": "mute",
+      "pred_action": "mute",
+      "action_match": true,
+      "gt_type": "scam",
+      "pred_type": "scam",
+      "type_match": true,
+      "confidence": 0.95
+    },
+    {
+      "message_id": "sample_msg_020",
+      "gt_action": "mute",
+      "pred_action": "mute",
+      "action_match": true,
+      "gt_type": "scam",
+      "pred_type": "scam",
+      "type_match": true,
+      "confidence": 0.95
+    },
+    {
+      "message_id": "sample_msg_041",
+      "gt_action": "digest",
+      "pred_action": "digest",
+      "action_match": true,
+      "gt_type": "personal",
+      "pred_type": "personal",
+      "type_match": true,
+      "confidence": 0.86
+    },
+    {
+      "message_id": "sample_msg_042",
+      "gt_action": "notify",
+      "pred_action": "digest",
+      "action_match": false,
+      "gt_type": "urgent",
+      "pred_type": "personal",
+      "type_match": false,
+      "confidence": 0.78
+    },
+    {
+      "message_id": "sample_msg_043",
+      "gt_action": "mute",
+      "pred_action": "mute",
+      "action_match": true,
+      "gt_type": "spam",
+      "pred_type": "promotion",
+      "type_match": false,
+      "confidence": 0.89
+    },
+    {
+      "message_id": "sample_msg_044",
+      "gt_action": "digest",
+      "pred_action": "notify",
+      "action_match": false,
+      "gt_type": "promotion",
+      "pred_type": "promotion",
+      "type_match": true,
+      "confidence": 0.86
+    },
+    {
+      "message_id": "sample_msg_045",
+      "gt_action": "mute",
+      "pred_action": "digest",
+      "action_match": false,
+      "gt_type": "promotion",
+      "pred_type": "promotion",
+      "type_match": true,
+      "confidence": 0.82
+    },
+    {
+      "message_id": "sample_msg_046",
+      "gt_action": "notify",
+      "pred_action": "notify",
+      "action_match": true,
+      "gt_type": "event",
+      "pred_type": "event",
+      "type_match": true,
+      "confidence": 0.92
+    },
+    {
+      "message_id": "sample_msg_047",
+      "gt_action": "mute",
+      "pred_action": "mute",
+      "action_match": true,
+      "gt_type": "promotion",
+      "pred_type": "promotion",
+      "type_match": true,
+      "confidence": 0.88
+    },
+    {
+      "message_id": "sample_msg_048",
+      "gt_action": "digest",
+      "pred_action": "digest",
+      "action_match": true,
+      "gt_type": "business_update",
+      "pred_type": "business_update",
+      "type_match": true,
+      "confidence": 0.83
+    },
+    {
+      "message_id": "sample_msg_049",
+      "gt_action": "digest",
+      "pred_action": "notify",
+      "action_match": false,
+      "gt_type": "unknown",
+      "pred_type": "personal",
+      "type_match": false,
+      "confidence": 0.86
+    },
+    {
+      "message_id": "sample_msg_050",
+      "gt_action": "digest",
+      "pred_action": "digest",
+      "action_match": true,
+      "gt_type": "personal",
+      "pred_type": "personal",
+      "type_match": true,
+      "confidence": 0.85
+    },
+    {
+      "message_id": "sample_msg_051",
+      "gt_action": "notify",
+      "pred_action": "notify",
+      "action_match": true,
+      "gt_type": "urgent",
+      "pred_type": "urgent",
+      "type_match": true,
+      "confidence": 0.92
+    },
+    {
+      "message_id": "sample_msg_052",
+      "gt_action": "mute",
+      "pred_action": "mute",
+      "action_match": true,
+      "gt_type": "scam",
+      "pred_type": "scam",
+      "type_match": true,
+      "confidence": 0.95
+    },
+    {
+      "message_id": "sample_msg_053",
+      "gt_action": "mute",
+      "pred_action": "mute",
+      "action_match": true,
+      "gt_type": "scam",
+      "pred_type": "scam",
+      "type_match": true,
+      "confidence": 0.87
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+version: "1.0"
+name: "openenv-llm-router"
+description: >
+  An InferenceOps environment simulating dynamic LLM API routing. Agents must 
+  balance financial budget constraints and system thermal throttling (server load) 
+  to maximize routing quality across queues of varying complexity. Requires 
+  long-horizon planning and meta-action usage to cool down the server.
+entrypoint: "server.app:app"
+
+action_space:
+  description: "A Pydantic model dictating the routing endpoint, meta-actions (cooldown/budget checks), and queue submission."
+  type: "RouterAction"
+
+observation_space:
+  description: "A multi-dimensional state representing financial budget, server thermal load (0.0-1.0), remaining queue depth, and rolling average quality."
+  type: "RouterObservation"
+
+tasks:
+  - id: "task_1_keyword"
+    name: "Heuristic Routing"
+    description: "Route 10 low-complexity queries with an ample budget. Tests basic grammar and queue completion."
+  - id: "task_2_budget"
+    name: "Constraint-Aware Optimization"
+    description: "Route 20 mixed queries with a highly restricted $1.00 budget. Requires efficient endpoint interleaving."
+  - id: "task_3_latency"
+    name: "Dynamic Thermal Management"
+    description: "Route 50 complex queries with high thermal risk. Agents must proactively use 'inspect_queue' to cool the server and prevent catastrophic 50% quality latency penalties."

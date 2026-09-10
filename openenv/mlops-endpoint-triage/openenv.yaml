@@ -1,0 +1,25 @@
+name: mlops-endpoint-triage
+version: 1.0.0
+description: "A real-world MLOps environment simulating dependency, config, and tensor debugging for broken model deployments."
+environment:
+  module: server.env
+  class: MLOpsEnvironment
+client:
+  module: client
+  class: MLOpsEnvClient
+tasks:
+  - id: "task_1"
+    name: "The JSON Typo"
+    difficulty: "easy"
+  - id: "task_2"
+    name: "The Dependency Clash"
+    difficulty: "medium"
+  - id: "task_3"
+    name: "The Hardcoded CUDA"
+    difficulty: "medium"
+  - id: "task_4"
+    name: "The Safetensors Mismatch"
+    difficulty: "hard"
+  - id: "task_5"
+    name: "The Missing Chat Template"
+    difficulty: "hard"

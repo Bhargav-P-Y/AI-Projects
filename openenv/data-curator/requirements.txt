@@ -1,0 +1,12 @@
+# Core OpenEnv Framework
+openenv-core>=0.2.2
+
+# API Server (Required for server.app:app in Dockerfile)
+fastapi
+uvicorn
+
+# Data Models (Required for models.py)
+pydantic
+
+# Environment Utilities (Added for auto-formatting the pipeline code)
+autopep8>=2.0.0
