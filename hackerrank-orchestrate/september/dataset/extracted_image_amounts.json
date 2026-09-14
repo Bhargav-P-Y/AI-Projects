@@ -1,0 +1,178 @@
+{
+  "image_01": {
+    "image_id": "image_01",
+    "event_id": "event_253",
+    "user_id": "user_03",
+    "request_id": "request_03",
+    "description": "August 2019 net salary",
+    "amount": 4365000.0,
+    "currency": "IDR",
+    "confidence": "high",
+    "notes": "Net Pay for August 2019 payslip"
+  },
+  "image_02": {
+    "image_id": "image_02",
+    "event_id": "event_1442",
+    "user_id": "user_16",
+    "request_id": "request_16",
+    "description": "Outstanding rent balance",
+    "amount": 100000.0,
+    "currency": "INR",
+    "confidence": "high",
+    "notes": "Extracted the Balance Due representing the outstanding rent balance."
+  },
+  "image_03": {
+    "image_id": "image_03",
+    "event_id": "event_1545",
+    "user_id": "user_17",
+    "request_id": "request_17",
+    "description": "Bulk groceries and pantry purchase",
+    "amount": 41272.0,
+    "currency": "INR",
+    "confidence": "high",
+    "notes": "Extracted Net Amount / Cash Paid from receipt"
+  },
+  "image_04": {
+    "image_id": "image_04",
+    "event_id": "event_1700",
+    "user_id": "user_19",
+    "request_id": "request_19",
+    "description": "Delivered grocery order",
+    "amount": 2854.0,
+    "currency": "INR",
+    "confidence": "medium",
+    "notes": "Extracted visible Item Bill amount as grand total is cut off at the bottom of the image"
+  },
+  "image_05": {
+    "image_id": "image_05",
+    "event_id": "event_1786",
+    "user_id": "user_20",
+    "request_id": "request_20",
+    "description": "Outstanding telecom bill",
+    "amount": 704.05,
+    "currency": "INR",
+    "confidence": "high",
+    "notes": "Extracted total amount due / this month's charges (704.05 INR) from Airtel business bill summary."
+  },
+  "image_06": {
+    "image_id": "image_06",
+    "event_id": "event_3051",
+    "user_id": "user_33",
+    "request_id": "request_33",
+    "description": "Grocery tax invoice",
+    "amount": 1995.0,
+    "currency": "INR",
+    "confidence": "high",
+    "notes": "Extracted the final Total amount from the invoice table, confirmed by the amount in words (One Thousand And Nine Hundred And Ninety-Five Rupees)."
+  },
+  "image_07": {
+    "image_id": "image_07",
+    "event_id": "event_3231",
+    "user_id": "user_35",
+    "request_id": "request_35",
+    "description": "Restaurant tax invoice",
+    "amount": 8528.0,
+    "currency": "INR",
+    "confidence": "high",
+    "notes": "Grand Total (RS) rounded from 8528.10"
+  },
+  "image_08": {
+    "image_id": "image_08",
+    "event_id": "event_4535",
+    "user_id": "user_48",
+    "request_id": "request_48",
+    "description": "Property maintenance invoice",
+    "amount": 15339.0,
+    "currency": "INR",
+    "confidence": "high",
+    "notes": "Extracted total amount received from receipt"
+  },
+  "image_09": {
+    "image_id": "image_09",
+    "event_id": "event_5170",
+    "user_id": "user_55",
+    "request_id": "request_55",
+    "description": "Water bill due",
+    "amount": 723.0,
+    "currency": "INR",
+    "confidence": "high",
+    "notes": "Extracted the Total Amount Received from the water bill receipt."
+  },
+  "image_10": {
+    "image_id": "image_10",
+    "event_id": "event_6033",
+    "user_id": "user_64",
+    "request_id": "request_64",
+    "description": "Large grocery tax invoice",
+    "amount": 79679.26,
+    "currency": "INR",
+    "confidence": "high",
+    "notes": "Extracted final Total / Balance Due of 79,679.26 INR"
+  },
+  "image_11": {
+    "image_id": "image_11",
+    "event_id": "event_6859",
+    "user_id": "user_73",
+    "request_id": "request_73",
+    "description": "Hospital bill payable",
+    "amount": 3650.0,
+    "currency": "INR",
+    "confidence": "high",
+    "notes": "Extracted the Amount Payable / Balance from the provisional hospital bill."
+  },
+  "image_12": {
+    "image_id": "image_12",
+    "event_id": "event_7307",
+    "user_id": "user_78",
+    "request_id": "request_78",
+    "description": "Taxi fare",
+    "amount": 33.5,
+    "currency": "USD",
+    "confidence": "high",
+    "notes": "Extracted total taxi fare amount"
+  },
+  "image_13": {
+    "image_id": "image_13",
+    "event_id": "event_7941",
+    "user_id": "user_84",
+    "request_id": "request_84",
+    "description": "Tote bag order",
+    "amount": 2298.0,
+    "currency": "INR",
+    "confidence": "high",
+    "notes": "Total paid amount including taxes and delivery"
+  },
+  "image_14": {
+    "image_id": "image_14",
+    "event_id": "event_9421",
+    "user_id": "user_101",
+    "request_id": "request_101",
+    "description": "Pharmacy purchase",
+    "amount": 4543.0,
+    "currency": "INR",
+    "confidence": "high",
+    "notes": "Extracted the handwritten grand total of 4543.00 INR (Rs. 4543 Ps. 00)."
+  },
+  "image_15": {
+    "image_id": "image_15",
+    "event_id": "event_9806",
+    "user_id": "user_105",
+    "request_id": "request_105",
+    "description": "Airline ticket purchase",
+    "amount": 9968.0,
+    "currency": "INR",
+    "confidence": "high",
+    "notes": "Grand Total including taxes for airline ticket"
+  },
+  "image_16": {
+    "image_id": "image_16",
+    "event_id": "event_10521",
+    "user_id": "user_113",
+    "request_id": "request_113",
+    "description": "EV charging wallet payment",
+    "amount": 393.22,
+    "currency": "INR",
+    "confidence": "high",
+    "notes": "Total payable amount including CGST and SGST for EV charging"
+  }
+}

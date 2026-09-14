@@ -7,7 +7,7 @@
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white)]()
 [![Pydantic](https://img.shields.io/badge/Schemas-Pydantic%20v2-E92063?logo=pydantic&logoColor=white)]()
 
-An industry-grade portfolio demonstrating full-lifecycle Applied AI, Multi-Agent Systems, Reinforcement Learning Gym Environments, and Production MLOps. Engineered with verified competitive track records across tier-one hackathons (Amazon, Meta x PyTorch x Hugging Face, HackerRank) and strict production standards: containerized non-root runtimes, AST syntax guardrails, Pydantic type safety, and reproducible benchmarks across frontier LLMs.
+An industry-grade portfolio demonstrating full-lifecycle Applied AI, Multi-Agent Systems, Reinforcement Learning Gym Environments, and Production MLOps. Engineered with verified competitive track records across tier-one hackathons (Amazon, Meta x PyTorch x Hugging Face, HackerRank Orchestrate) and strict production standards: containerized non-root runtimes, AST syntax guardrails, Pydantic type safety, and reproducible benchmarks across frontier LLMs.
 
 ---
 
@@ -21,7 +21,13 @@ An industry-grade portfolio demonstrating full-lifecycle Applied AI, Multi-Agent
 │  out-of-fold target encoding, optimized via LightGBM regression across thousands of teams.             │
 └────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 ┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│  🥈 HackerRank Orchestrate 2026 — Global Rank 421 / 1,983 Finalists (~22,000 Global Registrants)       │
+│  🤖 HackerRank Orchestrate Sept 2026 — "Buy or Wait?" Autonomous Financial Decision Agent             │
+│  Architected a hybrid financial decision agent combining O(N) Suffix Minima Dynamic Programming for    │
+│  zero-hallucination cash flow forecasting with a bounded ReAct loop, Gemini 3.8 Flash OCR receipt       │
+│  extraction, and strict contract guardrails. Evaluated 250 requests in 119s at $0.006 total cost.     │
+└────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│  🥈 HackerRank Orchestrate Aug 2026 — Global Rank 421 / 1,983 Finalists (~22,000 Global Registrants)    │
 │  Architected a 6-stage autonomous multimodal agent for WhatsApp notification triage (notify/digest/    │
 │  mute) featuring Gemini Flash OCR, Whisper ASR, 2-stage injection defense, and hybrid BM25 retrieval. │
 │  Defended in a 30-minute voice AI Judge architectural interview; Top ~2% of all 22,000 registrants.    │
@@ -37,8 +43,9 @@ An industry-grade portfolio demonstrating full-lifecycle Applied AI, Multi-Agent
 
 | Competency | Demonstration in Repository | Key Tooling & Frameworks |
 | :--- | :--- | :--- |
-| **Autonomous Multi-Agent Systems** | 6-stage sequential agent pipeline with OCR/ASR ingestion, safety gating, and context retrieval | Gemini 3.6 Flash, BM25, Pydantic, RapidFuzz |
-| **Multimodal Systems & Embeddings** | Dual-stream sentence transformers concatenated with ResNet50 Global Average Pooling | PyTorch, `sentence-transformers`, `torchvision`, BLIP |
+| **Autonomous Multi-Agent Systems** | 6-stage sequential agent pipeline (Aug) & Bounded ReAct agent with $O(N)$ Suffix Minima DP (Sept) | Gemini 3.8 Flash, ReAct Loop, BM25, Pydantic |
+| **Financial AI & Constraint Solving** | $O(N)$ Suffix Minima DP cash-flow simulator, installment solver, and multi-currency FX conversion | Python, NumPy, Dataclasses, Dynamic Programming |
+| **Multimodal Systems & Embeddings** | Dual-stream sentence transformers concatenated with ResNet50 GAP; Gemini Flash receipt OCR & ASR | PyTorch, `sentence-transformers`, `torchvision`, BLIP |
 | **RL Environments & Benchmarking** | Standardized gym environments adhering to the Meta OpenEnv Pydantic Quad-Spec (`Action`/`Obs`/`Reward`/`State`) | OpenEnv, Docker (non-root UID 1000), `uv` |
 | **Code Surgery & AST Guardrails** | Automated programmatic refactoring with `ast.parse` syntax checks and shaped negative rewards | Python AST, Autopep8, Llama-3.3-70B |
 | **Deep Learning from First Principles** | Custom PyTorch pipeline with manual forward/backward loops, L2 weight decay, and XAI feature weights | PyTorch `nn.Module`, SGD, BCELoss |
@@ -51,7 +58,8 @@ An industry-grade portfolio demonstrating full-lifecycle Applied AI, Multi-Agent
 | Paradigm | Project / Subsystem | Primary Tech Stack | Key Architectural Innovation / Verified Metric | Directory Link |
 | :--- | :--- | :--- | :--- | :--- |
 | **Multimodal Systems** | **Amazon ML Challenge: Price Predictor** | PyTorch, ResNet50, LightGBM, Hugging Face | **Top 12% Finish (52.44% SMAPE)**; Dual-transformer text fusion + 2048-dim ResNet50 GAP + Target Encoding | [`Multimodal-Cost-Predictor/`](./Multimodal-Cost-Predictor) |
-| **Autonomous Agents** | **HackerRank Orchestrate: Notification Router** | Gemini 3.6 Flash, BM25, RapidFuzz, Whisper | **Global Rank 421 / 1,983 Finalists** (~22K Registrants); 6-stage agent pipeline, 2-stage safety filter | [`hackerrank-orchestrate/`](./hackerrank-orchestrate) |
+| **Autonomous Agents** | **Orchestrate Sept: "Buy or Wait?" Agent** | Python, Gemini 3.8 Flash, Dynamic Programming, ReAct | $O(N)$ Suffix Minima DP cash-flow simulator; 250 requests in 119s at $0.006 total cost; 100% contract compliance | [`hackerrank-orchestrate/september/`](./hackerrank-orchestrate/september) |
+| **Autonomous Agents** | **Orchestrate Aug: Notification Router** | Gemini 3.6 Flash, BM25, RapidFuzz, Whisper | **Global Rank 421 / 1,983 Finalists** (~22K Registrants); 6-stage agent pipeline, 2-stage safety filter | [`hackerrank-orchestrate/august/`](./hackerrank-orchestrate/august) |
 | **RL Environments** | **OpenEnv: InferenceOps LLM Router** | OpenEnv, Docker, Pydantic v2, Llama-3.3-70B | *Meta x Scaler Hackathon*; Simulated API economy, dynamic Pareto cost-latency dispatching with thermal traps | [`openenv/llm-router/`](./openenv/llm-router) |
 | **RL Environments** | **OpenEnv: Data Curator Alignment** | Python AST, Autopep8, Docker, Hugging Face | *Meta x Scaler Hackathon*; AST-validated code surgery, anti-cheating guardrails, PII redaction | [`openenv/data-curator/`](./openenv/data-curator) |
 | **RL Environments** | **OpenEnv: MLOps Endpoint Triage** | SWE-Agent Toolset, Docker, Qwen 2.5-72B | *Meta x Scaler Hackathon*; Memory-efficient tracebacks (<150MB RAM), Jinja2 chat templates, Safetensors | [`openenv/mlops-endpoint-triage/`](./openenv/mlops-endpoint-triage) |
@@ -77,31 +85,21 @@ An end-to-end multimodal machine learning pipeline predicting product prices acr
 
 ---
 
-### 2. Autonomous Multimodal Notification Router (HackerRank Orchestrate — Global Rank 421)
-A 6-stage sequential agent pipeline reasoning over incoming multimodal WhatsApp messages to decide immediate attention (`notify`), batching (`digest`), or suppression (`mute`). Built for the 24-hour HackerRank Orchestrate hackathon (August 2026).
-```
-Incoming Message (Text / Image / Voice)
-   │
-   ▼
-[Phase 1: Data Loader & Profile Builder] ──► Builds O(1) in-memory UserProfile maps across 13 relational CSVs
-   │
-   ▼
-[Phase 2: Media Extractor] ───────────────► Gemini Flash Vision OCR for images + ASR for voice notes
-   │
-   ▼
-[Phase 3: 2-Stage Safety Filter] ─────────► Fast-tracks hard threats (prompt injection, scam domains) -> MUTE
-   │ (Safe messages proceed)
-   ▼
-[Phase 4: Hybrid Retriever & Context] ───► BM25 + Dense Semantic search over message history in XML sandbox
-   │
-   ▼
-[Phase 5: LLM Router Engine] ─────────────► Gemini 3.6 Flash batching (3-msg batches, 4-key rotation, 429 failover)
-   │
-   ▼
-[Phase 6: Confidence Calibrator] ────────► Domain signal adjustments -> Final submission output.csv
-```
-- **Competition Track Record**: Ranked **#421 globally** among **1,983 submitting finalists** who completed the build and the 30-minute AI Judge interview, out of **~22,000 global signups** (Top ~2% of all registrants).
-- 🔗 *Explore source & test suites*: [`hackerrank-orchestrate/`](./hackerrank-orchestrate)
+### 2. HackerRank Orchestrate Series: Autonomous Agent Systems
+
+#### A. September 2026 Edition: "Buy or Wait?" Autonomous Financial Decision Agent
+An autonomous, deterministic, and multimodal financial agent evaluating consumer affordability against personal cash-flow forecasts, commitments, and provider installment plans.
+- **$O(N)$ Suffix Minima Dynamic Programming**: Employs a forward-backward DP pass over 90-day cash horizons ($\text{suffix\_min}[t] = \min_{k \ge t}(\text{balance}[k] - \text{floor})$), verifying future liquidity bounds in $O(1)$ time without expensive step-by-step simulations.
+- **Multimodal Evidence Extraction**: Automated Gemini 3.8 Flash OCR extracting missing transaction values from receipts, with a semantic message reconciler adjusting for amendments and cancellations.
+- **Bounded ReAct Reasoning Loop (`max_steps=3`)**: Dynamic tool-assisted execution with deterministic fallbacks, achieving 0 unhandled exceptions across 250 evaluation requests in 119 seconds (~476ms/req) at $0.006 total cost.
+- 🔗 *Explore September solution*: [`hackerrank-orchestrate/september/`](./hackerrank-orchestrate/september)
+
+#### B. August 2026 Edition: Multimodal Notification Router (Global Rank 421)
+A 6-stage sequential agent pipeline reasoning over incoming multimodal WhatsApp messages to decide immediate attention (`notify`), batching (`digest`), or suppression (`mute`).
+- **Zero-Token Safety Short-Circuiting**: Intercepts prompt injections and scam URLs via deterministic regex heuristics upfront, preserving downstream API tokens and minimizing latency.
+- **Hybrid Context Retrieval**: Combines BM25 keyword matching with dense semantic search across 13 relational tables, sandboxed inside strict XML tags to prevent context poisoning.
+- **Competition Track Record**: Ranked **#421 globally** among 1,983 submitting finalists across ~22,000 global signups (**Top ~2%**).
+- 🔗 *Explore August solution*: [`hackerrank-orchestrate/august/`](./hackerrank-orchestrate/august)
 
 ---
 
@@ -123,11 +121,11 @@ Standardized reinforcement learning environments developed for the **Meta PyTorc
 
 ## 🛠️ Engineering Rigor & Production Standards
 
-- **Strict Schema Enforcement**: All agent interfaces, observations, and actions conform to validated Pydantic v2 models.
-- **Deterministic AST Guardrails**: Code-editing environments enforce AST-level syntax and compliance validation before runtime execution.
+- **Strict Schema Enforcement**: All agent interfaces, observations, and actions conform to validated Pydantic v2 and Dataclass models.
+- **Deterministic AST & Contract Guardrails**: Code-editing environments enforce AST-level syntax validation, while financial agents enforce exact floating-point balance conservation ($P_1 + P_2 = \text{total}$).
 - **Containerization**: Non-root container specifications (`UID 1000`) ready for one-click Hugging Face Spaces deployment.
 - **Resilience & High Availability**: Multi-key API rotation with exponential backoff and circuit-breaking error handling.
-- **Reproducible Evaluation**: Verified benchmark baselines established across **Llama-3.3-70B-Instruct**, **Qwen 2.5-72B**, and **Gemini 3.6 Flash**.
+- **Reproducible Evaluation**: Verified benchmark baselines established across **Llama-3.3-70B-Instruct**, **Qwen 2.5-72B**, and **Gemini 3.8 Flash**.
 
 ---
 
@@ -147,8 +145,12 @@ cd AI-Projects
 python -m venv venv
 source venv/bin/activate  # On Windows: .\venv\Scripts\Activate.ps1
 
+# Run the September Orchestrate Financial Agent
+cd hackerrank-orchestrate/september
+python code/main.py
+
 # Run an OpenEnv container
-cd openenv/llm-router
+cd ../../openenv/llm-router
 docker build -t openenv-llm-router .
 docker run -p 7860:7860 openenv-llm-router
 ```
