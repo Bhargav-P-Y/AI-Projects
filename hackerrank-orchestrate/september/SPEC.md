@@ -258,10 +258,13 @@ def generate_grounded_explanation(
    - Unrealized investments (`direction == 'non_cash'`) are ignored.
    - Cancelled and failed transactions are ignored.
 4. **Safety Invariant**:
-   $$\forall t \in [\text{request\_date}, \text{request\_date} + 90\text{d}], \quad \text{Balance}(t) \ge \text{minimum\_balance\_to\_keep}$$
+   ```text
+   For all t in [request_date, request_date + 90d]:
+     Balance(t) >= minimum_balance_to_keep
+   ```
 
 ### 5.2 Metrics Computation
-- `amount_safe_to_pay`: Maximum amount safe on `request_date` **before** optional spending changes, subject to $0 \le \text{amount\_safe\_to\_pay} \le \text{requested\_amount}$.
+- `amount_safe_to_pay`: Maximum amount safe on `request_date` **before** optional spending changes, subject to `0 <= amount_safe_to_pay <= requested_amount`.
 - `earliest_date_for_full_payment`: First date within the 90-day forecast where a single full payment of `requested_amount` satisfies the safety invariant without optional spending changes. Equals `request_date` if `affordable_now`. Empty string `""` if impossible within 90 days.
 
 ### 5.3 Candidate Plan Generation & Eligibility
@@ -275,8 +278,8 @@ def generate_grounded_explanation(
      * The two payments must sum exactly to `requested_amount`.
    - Requires `allows_partial_payment == True`.
    - Requires `'partial_payment'` in `payment_methods_user_will_consider`.
-   - Requires $0 < \text{amount\_safe\_to\_pay} < \text{requested\_amount}$.
-   - Requires $\text{earliest\_date\_for\_full\_payment} \le \text{desired\_completion_date}$.
+   - Requires `0 < amount_safe_to_pay < requested_amount`.
+   - Requires `earliest_date_for_full_payment <= desired_completion_date`.
    - Affordability status must be `affordable_with_plan`.
    - Does NOT need to match an option in `request_payment_options.csv`.
    - Plan string: `request_date:amount_safe_to_pay | earliest_date_for_full_payment:(requested_amount - amount_safe_to_pay)`.
@@ -286,7 +289,7 @@ def generate_grounded_explanation(
    - Must strictly match an offer in `request_payment_options.csv`.
 4. **Wait (Affordable Later)**:
    - Requires `'full_payment'` in `payment_methods_user_will_consider`.
-   - Requires $\text{earliest\_date\_for\_full\_payment} \le \text{desired\_completion\_date}$.
+   - Requires `earliest_date_for_full_payment <= desired_completion_date`.
    - Plan: `earliest_date_for_full_payment:requested_amount`.
 5. **Fallback (Not Recommended)**:
    - Plan: `none`. `affordability_status = not_affordable`.
@@ -359,7 +362,7 @@ The system implements the 8 core optimization vectors recommended in the problem
 4. **Plan Generation**:
    - Deterministic candidate plan generator formulating full payments, 2-transaction partial schedules, and eligible provider installment tracks.
 5. **Deterministic Verification**:
-   - Strict daily liquidity simulation testing the invariant $\text{Balance}(t) \ge \text{minimum\_balance\_to\_keep}$ across every single day $t \in [0, 90\text{d}]$.
+   - Strict daily liquidity simulation testing the invariant `Balance(t) >= minimum_balance_to_keep` across every single day `t in [0, 90d]`.
 6. **Batching**:
    - Batch evaluation and concurrent request processing for high-throughput pipeline execution.
 7. **Persistent Caching**:
@@ -374,9 +377,9 @@ The system implements the 8 core optimization vectors recommended in the problem
 To eliminate code smells, performance bottlenecks, and redundant computational cycles, all core engines must strictly adhere to the following algorithmic principles:
 
 1. **Suffix Minima Dynamic Programming (DP)**:
-   - Calculating `earliest_date_for_full_payment` must run in a single backward pass $O(N)$ over the baseline 90-day trajectory rather than executing nested daily simulations ($O(N^2)$). Suffix minima $\text{suff\_min}[k] = \min_{t=k}^{90} B[t]$ resolves whether payment $P$ on day $k$ violates $\text{floor} + P$ in $O(1)$ time per day.
+   - Calculating `earliest_date_for_full_payment` must run in a single backward pass $O(N)$ over the baseline 90-day trajectory rather than executing nested daily simulations ($O(N^2)$). Suffix minima `suff_min[k] = min_{t=k..90} B[t]` resolves whether payment `P` on day `k` violates `floor + P` in $O(1)$ time per day.
 2. **Precomputation & Greedy Relief Sorting**:
-   - In `SpendingOptimizer`, stoppable and reducible actions are precomputed once per base event. Candidates are sorted descending by financial relief ($\Delta = \text{amount} - \text{min\_amount}$) so combination searches (1, 2, and 3 changes) greedily find valid liquidity solutions on the earliest simulation iterations.
+   - In `SpendingOptimizer`, stoppable and reducible actions are precomputed once per base event. Candidates are sorted descending by financial relief (`relief = amount - min_amount`) so combination searches (1, 2, and 3 changes) greedily find valid liquidity solutions on the earliest simulation iterations.
 3. **Direct ISO-8601 String Operations**:
    - Because all dates adhere to standard `YYYY-MM-DD` formatting, date ordering and range checks ($\le, \ge, ==$) must use direct string comparisons. Year and month extraction must use string slicing (`s[:4]`, `s[5:7]`) instead of repetitive, expensive `datetime.strptime()` calls.
 4. **Elimination of Redundant Simulations**:

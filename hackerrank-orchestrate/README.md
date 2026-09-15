@@ -67,10 +67,12 @@ In consumer finance, deciding **"Can I afford this?"** cannot be answered by cur
 
 - **Competition Track Record**: Ranked **#197 globally (Top 1%)** among **30,000+ registered developers** (~2,000+ submitting finalists) in the 24-hour hackathon.
 
-1. **$O(N)$ Suffix Minima Dynamic Programming**:
+1. **O(N) Suffix Minima Dynamic Programming**:
    Instead of re-simulating 90-day cash flows for every candidate payment or installment plan, the `CashFlowSimulator` runs a forward cumulative pass followed by a backward suffix minimum pass:
-   $$\text{suffix\_min}[t] = \min_{k \ge t} \left( \text{balance}[k] - \text{min\_balance\_to\_keep} \right)$$
-   This enables exact, $O(1)$ verification of whether any payment on date $t$ breaches the cash reserve at any point in the future.
+   ```text
+   suffix_min[t] = min_{k >= t} (balance[k] - min_balance_to_keep)
+   ```
+   This enables exact, **O(1) verification** of whether any payment on date `t` breaches the cash reserve at any point in the future.
 2. **Multimodal Evidence Resolution**:
    Automated OCR extraction for receipts with missing transaction amounts and semantic message reconciliation for financial amendments, backed by persistent entity-scoped JSON caches.
 3. **Bounded ReAct Agent (`max_steps=3`)**:

@@ -87,7 +87,7 @@ An end-to-end multimodal machine learning pipeline predicting product prices acr
 #### A. September 2026 Edition: "Buy or Wait?" Autonomous Financial Decision Agent (Global Rank 197)
 An autonomous, deterministic, and multimodal financial agent evaluating consumer affordability against personal cash-flow forecasts, commitments, and provider installment plans.
 - **Competition Track Record**: Ranked **#197 globally (Top 1%)** among **30,000+ registered participants** (~2,000+ submitting finalists) in the 24-hour HackerRank Orchestrate hackathon.
-- **$O(N)$ Suffix Minima Dynamic Programming**: Employs a forward-backward DP pass over 90-day cash horizons ($\text{suffix\_min}[t] = \min_{k \ge t}(\text{balance}[k] - \text{floor})$), verifying future liquidity bounds in $O(1)$ time without expensive step-by-step simulations.
+- **$O(N)$ Suffix Minima Dynamic Programming**: Employs a forward-backward DP pass over 90-day cash horizons (`suffix_min[t] = min_{k >= t}(balance[k] - floor)`), verifying future liquidity bounds in $O(1)$ time without expensive step-by-step simulations.
 - **Multimodal Evidence Extraction**: Automated Gemini 3.8 Flash OCR extracting missing transaction values from receipts, with a semantic message reconciler adjusting for amendments and cancellations.
 - **Bounded ReAct Reasoning Loop (`max_steps=3`)**: Dynamic tool-assisted execution with deterministic fallbacks, achieving 0 unhandled exceptions across 250 evaluation requests in 119 seconds (~476ms/req) at $0.006 total cost.
 - 🔗 *Explore September solution*: [`hackerrank-orchestrate/september/`](./hackerrank-orchestrate/september)
@@ -120,7 +120,7 @@ Standardized reinforcement learning environments developed for the **Meta PyTorc
 ## 🛠️ Engineering Rigor & Production Standards
 
 - **Strict Schema Enforcement**: All agent interfaces, observations, and actions conform to validated Pydantic v2 and Dataclass models.
-- **Deterministic AST & Contract Guardrails**: Code-editing environments enforce AST-level syntax validation, while financial agents enforce exact floating-point balance conservation ($P_1 + P_2 = \text{total}$).
+- **Deterministic AST & Contract Guardrails**: Code-editing environments enforce AST-level syntax validation, while financial agents enforce exact floating-point balance conservation (`P1 + P2 = requested_amount`).
 - **Containerization**: Non-root container specifications (`UID 1000`) ready for one-click Hugging Face Spaces deployment.
 - **Resilience & High Availability**: Multi-key API rotation with exponential backoff and circuit-breaking error handling.
 - **Reproducible Evaluation**: Verified benchmark baselines established across **Llama-3.3-70B-Instruct**, **Qwen 2.5-72B**, and **Gemini 3.8 Flash**.
