@@ -67,9 +67,6 @@ An industry-grade portfolio demonstrating full-lifecycle Applied AI, Multi-Agent
 | **Deep Learning** | **League of Legends Match Predictor** | PyTorch (`nn.Module`), SGD, StandardScaler | Custom PyTorch pipeline from scratch: manual training loop, state_dict serialization, XAI feature weights | [`League-of-Legends-Match-Predictor/`](./League-of-Legends-Match-Predictor) |
 | **Computer Vision** | **Automated Waste Sorting Classifier** | TensorFlow, Keras, VGG16, Data Augmentation | Transfer learning with progressive unfreezing and fine-tuning for recyclable/organic segregation | [`Waste-Classification/`](./Waste-Classification) |
 | **Classical ML** | **Australian Rainfall Prediction Pipeline** | Scikit-Learn, Pandas, Seaborn, GridSearch | Imputation, feature scaling, and hyperparameter-tuned Logistic Regression vs. Random Forest models | [`Rainfall-Prediction/`](./Rainfall-Prediction) |
-| **Algorithmic AI** | **Adversarial Minimax Game Engine** | Python, Pygame, NumPy | Adversarial game tree search with optimal Minimax decision-making and real-time GUI | [`Tic-Tac-Toe Game.py`](./Tic-Tac-Toe%20Game.py) |
-| **Information Filtering** | **Collaborative Filtering Recommender** | Pandas, NumPy, Matplotlib | Item-item Pearson correlation matrix with minimum interaction thresholds | [`Recommendation System.py`](./Recommendation%20System.py) |
-| **Conversational AI** | **Context-Augmented Rule Chatbot** | NLTK, Wikipedia API, Regex | Rule-based dialogue system augmented with dynamic Wikipedia API live article synthesis | [`Rule-Based Chatbot.py`](./Rule-Based%20Chatbot.py) |
 
 ---
 

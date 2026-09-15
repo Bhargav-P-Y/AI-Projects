@@ -8,7 +8,7 @@
 **Binary Classification | Logistic Regression | Hyperparameter Tuning | Model Interpretability**
 
 ##  Executive Summary
-This project establishes a rigorous **Deep Learning workflow** to predict the outcome of *League of Legends* matches (Win/Loss) based on in-game telemetry data. Unlike simple script-kiddie implementations, this project manually constructs the training pipeline using **PyTorch**, demonstrating a deep understanding of tensor operations, gradient descent, and model serialization.
+This project establishes a rigorous **PyTorch Deep Learning workflow** to predict the outcome of *League of Legends* matches (Win/Loss) based on in-game telemetry data. Built entirely from first principles, this project manually constructs the training and evaluation pipeline without high-level wrapper libraries, demonstrating granular control over tensor operations, explicit gradient descent routines, and clean model serialization.
 
 The solution focuses on **Explainable AI (XAI)** by extracting feature importance weights to understand *why* a match was won, identifying "Gold Earned" as the primary predictive factor.
 
@@ -52,12 +52,10 @@ Implemented a production-ready saving mechanism:
 * **Inference Check:** Implemented a loading verification step to ensure the reloaded model performs identical inference on test data.
 
 ##  Performance & Evaluation
-The model serves as a robust baseline for match prediction.
-* **Metric:** Accuracy, Precision, Recall, F1-Score.
-* **Visuals:**
-    * **ROC Curve:** Plotted True Positive vs. False Positive rates.
-    * **Confusion Matrix:** Analyzed Type I vs. Type II errors.
-* **Baseline Accuracy:** ~51% (Note: This indicates the need for more complex architectures like Neural Networks or XGBoost, which can be easily swapped into this established pipeline).
+The linear logistic model establishes a calibrated first-principles baseline for match outcome prediction:
+* **Metrics Tracked:** Accuracy, Precision, Recall, F1-Score, and ROC-AUC.
+* **Visuals:** ROC Curve and Confusion Matrix analyzing Type I vs. Type II error trade-offs.
+* **Baseline Accuracy:** ~51% (Establishes a rigorous linear lower bound, demonstrating that telemetry features exhibit non-linear interactions that motivate non-linear architectures like MLPs or Gradient Boosted Trees).
 
 ##  Usage
 
