@@ -21,10 +21,10 @@ An industry-grade portfolio demonstrating full-lifecycle Applied AI, Multi-Agent
 │  out-of-fold target encoding, optimized via LightGBM regression across thousands of teams.             │
 └────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 ┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│  🤖 HackerRank Orchestrate Sept 2026 — "Buy or Wait?" Autonomous Financial Decision Agent             │
-│  Architected a hybrid financial decision agent combining O(N) Suffix Minima Dynamic Programming for    │
-│  zero-hallucination cash flow forecasting with a bounded ReAct loop, Gemini 3.8 Flash OCR receipt       │
-│  extraction, and strict contract guardrails. Evaluated 250 requests in 119s at $0.006 total cost.     │
+│  🏆 HackerRank Orchestrate Sept 2026 — Global Rank 197 / Top 1% (30,000+ Global Participants)           │
+│  Architected a compound financial decision engine combining O(N) Suffix Minima Dynamic Programming    │
+│  for zero-hallucination liquidity forecasting with an 8-worker concurrent ReAct loop and Gemini Flash  │
+│  OCR. Evaluated 250 requests in 119s (<$0.01 cost) with 100% data integrity & schema invariant checks. │
 └────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 ┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 │  🥈 HackerRank Orchestrate Aug 2026 — Global Rank 421 / 1,983 Finalists (~22,000 Global Registrants)    │
@@ -58,7 +58,7 @@ An industry-grade portfolio demonstrating full-lifecycle Applied AI, Multi-Agent
 | Paradigm | Project / Subsystem | Primary Tech Stack | Key Architectural Innovation / Verified Metric | Directory Link |
 | :--- | :--- | :--- | :--- | :--- |
 | **Multimodal Systems** | **Amazon ML Challenge: Price Predictor** | PyTorch, ResNet50, LightGBM, Hugging Face | **Top 12% Finish (52.44% SMAPE)**; Dual-transformer text fusion + 2048-dim ResNet50 GAP + Target Encoding | [`Multimodal-Cost-Predictor/`](./Multimodal-Cost-Predictor) |
-| **Autonomous Agents** | **Orchestrate Sept: "Buy or Wait?" Agent** | Python, Gemini 3.8 Flash, Dynamic Programming, ReAct | $O(N)$ Suffix Minima DP cash-flow simulator; 250 requests in 119s at $0.006 total cost; 100% contract compliance | [`hackerrank-orchestrate/september/`](./hackerrank-orchestrate/september) |
+| **Compound AI & Systems** | **Orchestrate Sept: Financial Engine** | Python, Gemini 3.8 Flash, Dynamic Programming, ReAct | **Global Rank 197 (Top 1% / 30,000+ developers)**; $O(N)$ DP cash-flow solver, 8-worker concurrency | [`hackerrank-orchestrate/september/`](./hackerrank-orchestrate/september) |
 | **Autonomous Agents** | **Orchestrate Aug: Notification Router** | Gemini 3.6 Flash, BM25, RapidFuzz, Whisper | **Global Rank 421 / 1,983 Finalists** (~22K Registrants); 6-stage agent pipeline, 2-stage safety filter | [`hackerrank-orchestrate/august/`](./hackerrank-orchestrate/august) |
 | **RL Environments** | **OpenEnv: InferenceOps LLM Router** | OpenEnv, Docker, Pydantic v2, Llama-3.3-70B | *Meta x Scaler Hackathon*; Simulated API economy, dynamic Pareto cost-latency dispatching with thermal traps | [`openenv/llm-router/`](./openenv/llm-router) |
 | **RL Environments** | **OpenEnv: Data Curator Alignment** | Python AST, Autopep8, Docker, Hugging Face | *Meta x Scaler Hackathon*; AST-validated code surgery, anti-cheating guardrails, PII redaction | [`openenv/data-curator/`](./openenv/data-curator) |
@@ -87,8 +87,9 @@ An end-to-end multimodal machine learning pipeline predicting product prices acr
 
 ### 2. HackerRank Orchestrate Series: Autonomous Agent Systems
 
-#### A. September 2026 Edition: "Buy or Wait?" Autonomous Financial Decision Agent
+#### A. September 2026 Edition: "Buy or Wait?" Autonomous Financial Decision Agent (Global Rank 197)
 An autonomous, deterministic, and multimodal financial agent evaluating consumer affordability against personal cash-flow forecasts, commitments, and provider installment plans.
+- **Competition Track Record**: Ranked **#197 globally (Top 1%)** among **30,000+ registered participants** (~2,000+ submitting finalists) in the 24-hour HackerRank Orchestrate hackathon.
 - **$O(N)$ Suffix Minima Dynamic Programming**: Employs a forward-backward DP pass over 90-day cash horizons ($\text{suffix\_min}[t] = \min_{k \ge t}(\text{balance}[k] - \text{floor})$), verifying future liquidity bounds in $O(1)$ time without expensive step-by-step simulations.
 - **Multimodal Evidence Extraction**: Automated Gemini 3.8 Flash OCR extracting missing transaction values from receipts, with a semantic message reconciler adjusting for amendments and cancellations.
 - **Bounded ReAct Reasoning Loop (`max_steps=3`)**: Dynamic tool-assisted execution with deterministic fallbacks, achieving 0 unhandled exceptions across 250 evaluation requests in 119 seconds (~476ms/req) at $0.006 total cost.

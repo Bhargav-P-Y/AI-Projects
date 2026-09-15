@@ -1,5 +1,11 @@
 # HackerRank Orchestrate (September 2026) — Buy or Wait?
 
+[![Rank](https://img.shields.io/badge/Rank-Global%20%23197%20%7C%20Top%201%25-brightgreen.svg)]()
+[![Hackathon](https://img.shields.io/badge/Competition-HackerRank%20Orchestrate-orange.svg)](https://www.hackerrank.com)
+[![Scale](https://img.shields.io/badge/Participants-30%2C000%2B%20Registered-blue.svg)]()
+[![Status](https://img.shields.io/badge/Invariants-100%25%20Verified-success.svg)]()
+
+> **Global Placement**: Ranked **#197 globally (Top 1%)** out of **30,000+ registered developers** (~2,000+ submitting finalists) in the 24-hour hackathon.  
 > **An Autonomous, Deterministic & Multimodal AI Financial Decision Agent**  
 > Evaluates consumer purchase and payment requests against user financial position, commitments, liquidity forecasts, dated exchange rates, provider payment options, and multimodal evidence (receipts, statements, and messages treated as untrusted financial evidence per `AGENTS.md` §1).
 

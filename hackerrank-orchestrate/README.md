@@ -13,7 +13,7 @@ This directory contains solutions developed for the prestigious **HackerRank Orc
 
 | Edition | Challenge Title & Domain | Core Architecture & Algorithms | Verified Placement / Benchmark | Subfolder Link |
 | :--- | :--- | :--- | :--- | :--- |
-| **September 2026** | **"Buy or Wait?" Autonomous Financial Decision Agent** | $O(N)$ Suffix Minima DP cash-flow simulator, Bounded ReAct loop (`max_steps=3`), Gemini 3.8 Flash OCR receipt extraction, message reconciler | 250 requests processed in 119s (~476ms/req) at $0.006 total cost; 100% schema invariant compliance | [`september/`](./september) |
+| **September 2026** | **"Buy or Wait?" Autonomous Financial Decision Agent** | $O(N)$ Suffix Minima DP cash-flow simulator, Bounded ReAct loop (`max_steps=3`), Gemini 3.8 Flash OCR receipt extraction, message reconciler | **Global Rank 197 / Top 1%** (30,000+ Global Registrants); 250 requests in 119s at $0.006 cost | [`september/`](./september) |
 | **August 2026** | **Multimodal Message Notification Router** | 6-stage sequential agent pipeline (WhatsApp triage: `notify`/`digest`/`mute`), Gemini Flash OCR + Whisper ASR, 2-stage injection filter, BM25 retrieval | **Global Rank 421 / 1,983 Finalists** (~22,000 Global Registrants; Top ~2%) | [`august/`](./august) |
 
 ---
@@ -64,6 +64,8 @@ In consumer finance, deciding **"Can I afford this?"** cannot be answered by cur
                                      ▼
                       [FINAL OUTPUT: output.csv]
 ```
+
+- **Competition Track Record**: Ranked **#197 globally (Top 1%)** among **30,000+ registered developers** (~2,000+ submitting finalists) in the 24-hour hackathon.
 
 1. **$O(N)$ Suffix Minima Dynamic Programming**:
    Instead of re-simulating 90-day cash flows for every candidate payment or installment plan, the `CashFlowSimulator` runs a forward cumulative pass followed by a backward suffix minimum pass:
